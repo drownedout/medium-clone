@@ -1,0 +1,72 @@
+.subscribe-banner {
+	@include gradient();
+	@include flex($between);
+	padding: 5rem 2rem;
+	color: $white;
+	align-items: center;
+	font-weight: 300;
+	letter-spacing: .1rem;
+	position: relative;
+	overflow: hidden;
+	.icon {
+		position: absolute;
+		font-size: 15rem;
+		top: -2%;
+		left: -2%;
+		opacity: .1;
+		transform: rotate(65deg);
+	}
+	.subscribe-text, .subscribe-input {
+		@include flex-child(40%);
+		@media only screen and (max-width: 800px){
+	    	@include flex-child(90%);
+	    	margin-left: auto;
+	    	margin-right: auto;
+	    }
+	}
+	.subscribe-text {
+		@media only screen and (max-width: 800px){
+	    	margin-bottom: 1.5rem;
+	    }
+		p {
+			line-height: 40px;
+			margin: 15px 0 0 0;
+		}
+	}
+	.subscribe-input {
+		position: relative;
+		input {
+			height: 40px;
+			width: 100%;
+			border: none;
+			background: transparent;
+			outline: 0;
+			border-bottom: 1px solid $white;
+			&:focus {
+				border-color: $white;
+			}
+			&::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+			    color: $white;
+			}
+
+			&:-ms-input-placeholder { /* Internet Explorer 10-11 */
+			    color: $white;
+			}
+
+			&::-ms-input-placeholder { /* Microsoft Edge */
+			    color: $white;
+			}
+		}
+		&:before {
+				position: absolute;
+				font-family: "Font Awesome 5 Free";
+				content:"\f1d8";
+				height: 16px;
+				width: 16px;
+				color: $white;
+				top: 50%;
+				left: 98%;
+				transform: translate(-50%,-50%);
+			}
+	}
+}

@@ -1,0 +1,317 @@
+@mixin box-shadow($opacity){
+	-webkit-box-shadow: 6px 14px 100px -29px rgba(0,0,0,$opacity);
+	-moz-box-shadow: 6px 14px 100px -29px rgba(0,0,0,$opacity);
+	box-shadow: 6px 14px 100px -29px rgba(0,0,0,$opacity);
+}
+
+@mixin icon-shadow($opacity){
+	-webkit-box-shadow: 5px 8px 60px -23px rgba(0,0,0,$opacity);
+	-moz-box-shadow: 5px 8px 60px -23px rgba(0,0,0,$opacity);
+	box-shadow: 5px 8px 60px -23px rgba(0,0,0,$opacity);
+}
+
+@mixin text-shadow(){
+	text-shadow: 0px 1px 2px rgba(0, 0, 0, .3);
+}
+
+@mixin base-font(){
+	font-weight: 300;
+	color: $text;
+	line-height: 1.5rem;
+}
+
+@mixin gradient(){
+	background: rgb(0,77,228);
+	background: linear-gradient(49deg, rgba(0,77,228,1) 0%, rgba(108,23,204,1) 100%);
+}
+
+@mixin dark-gradient(){
+	background: rgb(22,23,26);
+	background: -webkit-gradient(linear, left top, right top, from(rgba(22,23,26,1)), to(rgba(38,40,47,1)));
+	background: -webkit-linear-gradient(left, rgba(22,23,26,1) 0%, rgba(38,40,47,1) 100%);
+	background: -o-linear-gradient(left, rgba(22,23,26,1) 0%, rgba(38,40,47,1) 100%);
+	background: linear-gradient(90deg, rgba(22,23,26,1) 0%, rgba(38,40,47,1) 100%);
+}
+
+@mixin blue-gradient(){
+	background: rgb(0,77,228);
+	background: linear-gradient(45deg, rgba(0,77,228,1) 0%, rgba(4,72,182,1) 100%);
+}
+
+@mixin banner($url, $height){
+	background: url($url);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	height: $height;
+	min-height: 500px;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	display: table;
+	position: relative;
+	@include inset-shadow(.5);
+	&:after {
+		display: block;
+		content: "";
+		width: 100%;
+		height: 100%;
+		opacity: .7;
+		z-index: 3;
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		@include gradient();
+	}
+}
+
+@mixin banner-content(){
+	position: relative;
+	z-index: 4;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+@mixin page-banner(){
+	min-height: 300px;
+	position: relative;
+	margin-bottom: 0;
+	padding: 0;
+	width: 100%;
+	display: table;
+	.banner-content {
+		@include banner-content();
+		text-align: center;
+		color: $white;
+		h1 {
+			font-size: 3rem;
+		}
+		p {
+			@include text-shadow();
+		}
+	}
+	.overlay {
+		@include blue-gradient();
+		opacity: .65;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		left: 0;
+	}
+}
+
+@mixin transition($timing){
+	-webkit-transition: all $timing ease-in-out;
+	-moz-transition: all $timing ease-in-out;
+	-o-transition: all $timing ease-in-out;
+	-ms-transition: all $timing ease-in-out;
+	transition: all $timing ease-in-out;
+}
+
+@mixin inset-shadow($opacity){
+	-webkit-box-shadow: inset 10px 10px 229px -17px rgba(0,0,0,$opacity);
+	-moz-box-shadow: inset 10px 10px 229px -17px rgba(0,0,0,$opacity);
+	box-shadow: inset 10px 10px 229px -17px rgba(0,0,0,$opacity);
+}
+
+@mixin base-text-shadow(){
+	text-shadow: 0px 1px 2px rgba(0, 0, 0, .3);
+}
+
+@mixin default-border(){
+	border: 1px solid darken($white, 5%);
+}
+
+@mixin flex-responsive(){
+	@media only screen and (max-width:1100px) {
+		flex-basis: 45%;
+		padding: 0 2.5%;
+	}
+	@media only screen and (max-width:750px) {
+		flex-basis: 80%;
+		padding: 0 10%;
+	}
+}
+
+@mixin flex($space){
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	flex: 1;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-box-pack: $space;
+    -ms-flex-pack: $space;
+	justify-content: $space;
+}
+
+@mixin flex-container($space){
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	flex: 1;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-box-pack: $space;
+    -ms-flex-pack: $space;
+	justify-content: $space;
+	max-width: 1200px;
+	width: 90%;
+	margin: 0 auto;
+}
+
+@mixin flex-child($width){
+	-ms-flex-preferred-size: calc(#{$width} - calc(#{$width}/20));
+	flex-basis: calc(#{$width} - calc(#{$width}/20));
+	max-width: calc(#{$width} - calc(#{$width}/20));
+}
+
+@mixin underline($color){
+	&:after{
+		display: block;
+		background-color: $color;
+		width: 120px;
+		height: 2px;
+		content: '\0020';
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		transform: translateY(10px);
+	}
+}
+
+@mixin section(){
+	padding: 4.5rem 0;
+}
+
+@mixin thumbnail(){
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	color: $white;
+	overflow: hidden;
+	position: relative;
+	border-radius: 10px;
+	@include box-shadow(.55);
+	&:hover {
+		img {
+			transform: scale(1.1);
+		}
+	}
+	img {
+		height: auto;
+		max-width: 120%;
+		min-height: 100%;
+		@include transition(.3s);
+	}
+	.overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		opacity: .35;
+		background-color: $title;
+	}
+	.content {
+		position: absolute;
+		top: 35%;
+		left: 50%;
+		width: 100%;
+		transform: translate(-50%, 50%);
+		z-index: 55;
+		h3 {
+			vertical-align: middle;
+			margin: 0;
+			font-size: 2rem;
+			@include base-text-shadow();
+			a {
+				display: block;
+				line-height: 1rem;
+				text-decoration: none;
+				color: $white;
+			}
+		}
+		p {
+			font-weight: 300;
+			font-size: 1.25rem;
+		}
+	}
+}
+
+@mixin card(){
+	@include box-shadow(.55);
+	.card-thumbnail {
+		width: 100%;
+		background-color: $white;
+		height: 300px;
+		text-align: center;
+		overflow: hidden;
+		position: relative;
+		border-top-left-radius: 10px;
+		border-top-right-radius: 10px;
+		img {
+			position: absolute;
+			width: 100%;
+			top: 0;
+			left: 0;
+			min-height: 100%;
+			object-fit: cover;
+			@include transition(.3s);
+		}
+	}
+	.card-content {
+		background-color: $white;
+		width: 90%;
+		padding: 1.25rem 5%;
+		max-width: 100%;
+		border-bottom-left-radius: 10px;
+		border-bottom-right-radius: 10px;
+		.card-title {
+			margin-top: .5rem;
+			.card-title-link {
+				font-weight: 300;
+				color: $title;
+				text-decoration: none;
+				@include transition(.3s);
+				&:hover {
+					color: $blue;
+					cursor: pointer;
+				}
+			}
+		}
+		.card-text {
+			@include base-font();
+		}
+	}
+}
+
+@mixin card-overlay($background-color){
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	background-color: $background-color;
+	@include transition(.3s);
+	a {
+		position: absolute;
+		font-size: 1.25rem;
+		z-index: 55;
+		color: $white;
+		text-decoration: none;
+		top: 50%;
+		left: 50%;
+		display: block;
+		transform: translate(-50%, -50%) scaleX(1.5);
+		@include transition(.3s);
+		@include text-shadow();
+		&:hover {
+			color: $blue;
+		}
+	}
+}

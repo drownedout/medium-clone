@@ -1,0 +1,86 @@
+.btn {
+	display: inline-block;
+	border-radius: 100px;
+	text-align: center;
+	box-sizing: border-box;
+	cursor: pointer;
+	text-decoration: none;
+	padding: 1rem 3rem;
+	letter-spacing: .15rem;
+	margin-right: .15rem;
+	font-size: .8rem;
+	@media only screen and (max-width:800px) {
+		width: 100%;
+		margin: 1rem auto;
+	}
+	@include transition(.3s);
+	@include box-shadow(.45);
+	&.primary {
+		color: $white;
+		background-color: $blue;
+		border: 1px solid darken($blue, 5%);
+		&:hover {
+			background-color: lighten($blue, 5%);
+		}
+	}
+	&.secondary {
+		color: $blue;
+		background-color: transparent;
+		border: 1px solid $blue;
+		&:hover {
+			color: $white;
+			@include blue-gradient();
+		}
+	}
+	&.red {
+		color: $white;
+		@include gradient();
+		border: 1px solid $red;
+		&:hover {
+			background-color: lighten($red, 10%);
+		}
+	}
+	&.white {
+		color: $white;
+		background-color: transparent;
+		border: 1px solid $white;
+		&:hover {
+			color: darken($white, 10%);
+			border: 1px solid darken($white, 10%);
+		}
+	}
+	&.white-fill {
+		color: $blue;
+		background-color: $white;
+		border: 1px solid $blue;
+		&:hover {
+			color: $white;
+			@include gradient();
+			border: 1px solid $blue;
+		}
+	}
+	&.blue {
+		color: $white;
+		@include blue-gradient();
+		border: 1px solid $blue;
+		@include transition(.4s);
+		&:hover {
+			background-color: lighten($blue, 10%);
+			@include icon-shadow(.5);
+			@include transition(.4s);
+		}
+	}
+	&.social {
+		border-radius: 0;
+		width: 100%;
+	}
+	&.fb {
+		background-color: darken($blue, 5%);
+	}
+	&.twitter {
+		background-color: lighten($blue, 25%);
+	}
+	&:hover {
+		transform: translateY(-1px);
+	}
+}

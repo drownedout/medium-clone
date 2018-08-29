@@ -24,7 +24,7 @@ class ArticleView extends Component {
 
 		return (
 			<div>
-				<h1> Article Show </h1>
+				<h1>Article Show</h1>
 			</div>
 		)
 	}

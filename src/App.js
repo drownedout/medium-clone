@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
+import './styles/css/App.css';
 import requireAuthentication from './utils/requireAuth';
 import Header from './components/Header';
 import Feed from './components/Feed';

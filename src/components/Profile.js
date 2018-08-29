@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import FollowButton from './FollowButton';
-import { getUserProfile, follow } from './../redux/actions';
+import { getUserProfile, follow } from './../redux/actions/actions';
 
 class Profile extends Component {
 
@@ -21,6 +21,7 @@ class Profile extends Component {
 	render(){
 		return (
 			<div>
+				
 			</div>
 		)
 	}

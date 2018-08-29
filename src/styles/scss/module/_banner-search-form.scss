@@ -1,0 +1,79 @@
+.banner-search {
+	width: 75%;
+	max-width: 1000px;
+	background-color: $white;
+    border-radius: 40px;
+    padding: 15px 0px;
+    margin: 8rem auto 2rem auto;
+    @include box-shadow(.55%);
+    @media only screen and (max-width: 800px) {
+    	border-radius: 10px;
+    }
+    @media only screen and (max-width: 600px) {
+    	width: 90%;
+    }
+    @media only screen and (max-width: 350px) {
+    	width: 100%;
+    }
+    .banner-search-form {
+    	color: $text;
+    	.search, .location {
+    		border-right: 1px solid #d9d9d9;
+		    margin-top: 5px;
+		    position: relative;
+		    height: 40px;
+		    input {
+		    	background-color: transparent;
+	    		outline: 0;
+	    		border: none;
+	    		height: 100%;
+	    		vertical-align: middle;
+	    		width: 90%;
+	    		padding: 0 2.5% 0 7.5%;
+		    }
+    	}
+    	.search, .location, .categories {
+    		width: 26%;
+    		display: inline-block;
+    		@media only screen and (max-width: 1200px) {
+		    	display: block;
+		    	width: 85%;
+		    	margin: 1rem auto;
+		    	padding: 0 5%;
+		    	border: none;
+		    	input, select {
+		    		width: 100%;
+		    		padding: 0;
+		    		height: 40px;
+		    		border-bottom: 1px solid $grey;
+		    		text-align: left;
+		    		option {
+		    			padding: 0;
+		    			white-space: normal;
+		    		}
+		    	}
+		    }
+    	}
+    	.categories {
+    		select {
+    			background-color: transparent;
+	    		outline: 0;
+	    		border: none;
+	    		width: 92.5%;
+	    		padding: 0 2.5% 0 5%;
+    		}
+    	}
+    	.btn {
+    		@media only screen and (max-width: 1200px) {
+		    	margin-top: 1rem;
+		    }
+    		@media only screen and (max-width: 800px) {
+		    	width: 60%;
+		    	margin: 1rem auto;
+		    }
+		    @media only screen and (max-width: 350px) {
+		    	width: 70%;
+		    }
+    	}
+    }
+}

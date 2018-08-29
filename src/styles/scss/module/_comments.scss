@@ -1,0 +1,155 @@
+.comment-container {
+	@include flex-child(76%);
+	.comment-header {
+		font-size: 2rem;
+		margin-top: 0;
+	}
+	.comment-item {
+		@include flex($between);
+		margin: 3rem 0;
+		&:first-child {
+			margin-top: 0;
+		}
+		.comment-picture-container {
+			@include flex-child(15%);
+			overflow: hidden;
+			border-radius: 100%;
+			@include box-shadow(.55);
+			@media only screen and (min-width: 1200px){
+				height: 110px;
+				width: 110px;
+				max-width: 110px;
+				max-height: 110px;
+				min-width: 110px;
+				min-height: 110px;
+			}
+			@media only screen and (min-width: 570px) and (max-width: 1200px){
+				width: 80px;
+				height: 80px;
+				min-width: 80px;
+				min-height: 80px;
+				max-width: 80px;
+				max-height: 80px;
+			}
+			@media only screen and (min-width: 450px) and (max-width: 570px){
+				width: 65px;
+				height: 65px;
+				min-width: 65px;
+				min-height: 65px;
+				max-width: 65px;
+				max-height: 65px;;
+			}
+			@media only screen and (min-width: 350px) and (max-width: 450px) {
+				width: 55px;
+				height: 55px;
+				min-width: 55px;
+				min-height: 55px;
+				max-height: 55px;
+				max-width: 55px;
+			}
+			@media only screen and (min-width: 250px) and (max-width: 350px) {
+				width: 45px;
+				height: 45px;
+				min-width: 45px;
+				min-height: 45px;
+				max-height: 45px;
+				max-width: 45px;
+			}
+			.comment-picture {
+				max-width: 150%;
+				min-height: 100%;
+			}
+		}
+		.comment-detail-container {
+			@include flex-child(85%);
+			@media only screen and (max-width: 550px){
+				@include flex-child(80%);
+			}
+			.comment-date, .comment-author {
+				font-size: .75rem;
+				color: $text;
+			}
+			.comment-date {
+				margin: 0 0 .25rem 0;
+			}
+			.comment-title {
+				text-align: left;
+				margin: .5rem 0;
+				font-size: 1.5rem;
+			}
+			.comment-author {
+				margin: .25rem 0;
+			}
+			.comment-text {
+				@include base-font();
+			}
+			.row {
+				.thumbs-row {
+					float: left;
+					span {
+						margin-right: 10px;
+						vertical-align: middle;
+						display: inline-block;
+						.icon {
+							vertical-align: middle;
+							color: $text;
+							display: inline-block;
+							font-size: 10px;
+							border: 1px solid $text;
+							border-radius: 100%;
+							padding: 5px;
+							margin-right: 5px;
+							@include transition(.3s);
+							&:hover {
+								color: $white;
+								background-color: $blue;
+								border-color: $blue;
+								cursor: pointer;
+							}
+						}
+					}
+				}
+				.reply {
+					float: right;
+					margin: 0;
+					@include transition(.3s);
+					&:hover {
+						cursor: pointer;
+						color: $blue;
+					}
+				}
+			}
+		}
+	}
+	.comment-form {
+		h3 {
+			font-size: 1.5rem;
+		}
+		form {
+			.input-field {
+				margin: 1rem 0;
+				width: 100%;
+				label {
+					width: 100%;
+					display: block;
+					margin-bottom: .5rem;
+				}
+				input, textarea {
+					width: 65%;
+					padding: 0 2.5%;
+					outline: 0;
+					border: 1px solid $grey;
+					&:focus {
+						border-color: $blue;
+					}
+				}
+				input {
+					height: 40px;
+				}
+				textarea {
+					height: 100px;
+				}
+			}
+		}
+	}
+}

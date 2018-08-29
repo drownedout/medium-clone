@@ -1,0 +1,14 @@
+.social-media-image-container{
+	display: flex;
+	flex-wrap: wrap;
+	.image-block {
+		flex-basis: 33.333333%;
+		-ms-flex-preferred-size: 33.333333%;
+		margin: 0;
+		padding: 0;
+		img {
+			max-width: 100%;
+			min-height: 100%;
+		}
+	}
+}

@@ -1,0 +1,44 @@
+.section-header {
+	position: relative;
+	text-align: center;
+	margin: 0 auto 3rem;
+	width: 95%;
+	max-width: 1200px;
+	h1 {
+		font-size: 2.75rem;
+		@media only screen and (max-width: 500px){
+	    	font-size: 2.25rem;
+	    	width: 95%;
+	    	margin-left: auto;
+	    	margin-right: auto;
+	    }
+	}
+	p {
+		color: $text;
+		font-weight: 300;
+		@media only screen and (max-width: 500px){
+	    	width: 95%;
+	    	margin-left: auto;
+	    	margin-right: auto;
+	    }
+	}
+	.line {
+		width: 150px;
+		height: 2px;
+		background-color: $title;
+		display:inline-block;
+		vertical-align: text-top;
+		@media only screen and (max-width: 450px) {
+	    	width: 100px;
+	    }
+	}
+	.icon {
+		margin: 0 1rem;
+		color: $blue;
+		font-size: 3rem;
+		display:inline-block;
+		@media only screen and (max-width: 500px){
+	    	font-size: 2.25rem;
+	    }
+	}
+}
