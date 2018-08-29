@@ -14,6 +14,18 @@ export function loadArticles(){
 	}
 }
 
+export function getArticle(article_id){
+	return (dispatch) => {
+		axios.get(`${url}/article/${article_id}`)
+		.then((res) => {
+			let article = res.data;
+			dispatch({ type: 'GET_ARTICLE', article })
+		}).catch((err) => {
+			console.log(err)
+		})
+	}
+}
+
 export function getUser(_id){
 	return axios.get(`${url}/user/${_id}`)
 		   .then((res) => {
