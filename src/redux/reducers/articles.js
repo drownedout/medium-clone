@@ -1,7 +1,7 @@
 const initialState = {
 	articles: [],
 	article: {}
-}
+};
 
 export default (state=initialState, action){
 	switch(action.type){
@@ -25,4 +25,4 @@ export default (state=initialState, action){
 		default:
 			return state;
 	}
-}
+};

@@ -2,7 +2,7 @@ const initialState = {
 	user: {},
 	isAuth: false,
 	profile: {}
-}
+};
 
 export default (state = initialState, action) => {
 	switch(action.type){
@@ -27,4 +27,4 @@ export default (state = initialState, action) => {
 		default:
 			return state;
 	}
-}
+};
