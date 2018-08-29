@@ -1,10 +1,12 @@
 .header {
     width: 100%;
     max-width: 100%;
-    min-height: 120px;
+    min-height: 90px;
     top: 0px;
-    @include transition(1s);
     background-color: $white;
+    border-bottom: 1px solid $grey;
+    @include transition(1s);
+    @include box-shadow(.13);
     @media only screen and (max-width: 800px) {
     	height: 90px;
     	min-height: 0;
@@ -13,7 +15,7 @@
 	    position: fixed;
 	    z-index: 99;
     }
-    .header-container {
+    .nav-wrapper {
 		max-width: 1200px;
 		margin: 0 auto;
 		width: 90%;
@@ -22,7 +24,7 @@
 			margin: 0;
 			padding: 0;
 		}
-		.header-logo {
+		.logo {
 		    position: relative;
 		    display: inline-block;
 		    float: left;
