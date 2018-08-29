@@ -1,5 +1,5 @@
 const articleController = require('../controllers/article_controller');
-const multipart = require('connect-multipart');
+const multipart = require('connect-multiparty');
 const multipartWare = multipart();
 
 module.exports = (router) => {
