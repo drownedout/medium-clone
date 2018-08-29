@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
+import requireAuthentication from './utils/requireAuth';
 import Header from './components/Header';
 import Feed from './components/Feed';
 import Profile from './components/Profile';
@@ -18,7 +19,7 @@ class App extends Component {
           <Route exact path="/" component={Feed} />
           <Route path="/profile/:id" component={Profile} />
           <Route path="/articleview/:id" component={ArticleView} />
-          <Route path="/editor" component={Editor} />
+          <Route path="/editor" component={requireAuthentication(Editor)} />
           <Route path="**" component={Feed} />
         </Switch>
       </div>
