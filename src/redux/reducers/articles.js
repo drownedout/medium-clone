@@ -3,7 +3,7 @@ const initialState = {
 	article: {}
 };
 
-export default (state=initialState, action){
+export default (state = initialState, action) => {
 	switch(action.type){
 		case 'GET_ARTICLES':
 			return {
@@ -19,7 +19,7 @@ export default (state=initialState, action){
 			let article = Object.assign({}, state.article);
 			article.claps++;
 			return {
-				..state,
+				...state,
 				article: article
 			}
 		default:
