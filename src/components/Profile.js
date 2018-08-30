@@ -19,9 +19,26 @@ class Profile extends Component {
 	}
 
 	render(){
+
+		function ItemList({ items }){
+			return (
+				<div>
+					<h1>{items.profile.user.name}</h1>
+					<p>{items.profile.user.email}</p>
+					<img 
+						alt={items.profile.user.name} 
+						className="avatar-image" 
+						src={items.profile.user.provider_pic} 
+						height="100" 
+						width="100"
+					/>
+				</div>
+			)
+		}
+
 		return (
 			<div>
-				
+				{Object.keys(this.props.profile).length > 0 ? <ItemList items={this.props} /> : ''}
 			</div>
 		)
 	}
