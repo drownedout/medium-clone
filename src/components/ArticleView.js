@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { getArticle, clap, follow } from './../redux/actions/actions';
 import PropTypes from 'prop-types';
 import FollowButton from './FollowButton';
+import { formatDate } from './../utils/helpers';
 
 class ArticleView extends Component {
 
@@ -19,7 +20,7 @@ class ArticleView extends Component {
 	}
 
 	render(){
-		const { text, claps, title, feature_img, author } = this.props._article;
+		const { text, claps, title, feature_img, author, created_at } = this.props._article;
 		let author_name, author_img, author_id;
 
 		if (author){
@@ -39,7 +40,7 @@ class ArticleView extends Component {
 							</div>
 							<div className="meta-container">
 								<h4 className="author-name"><a href={`/profile/${author_id}`}>{author_name}</a></h4>
-								<p className="created-date">Created</p>
+								<p className="created-date">Created {formatDate(created_at)}</p>
 							</div>
 						</div>
 						<div className="follow-btn-container">

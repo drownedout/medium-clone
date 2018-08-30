@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { loadArticles } from './../redux/actions/actions';
 import AsideFeed from './AsideFeed';
+import { formatDate } from './../utils/helpers';
 
 class Feed extends Component {
 
@@ -18,7 +19,7 @@ class Feed extends Component {
 					</div>
 					<div className="article-info">
                         <a className="author-name" href={`/profile/${article.author._id}`}>{article.author.name}</a>
-                        <small className="posted-at">Posted • A must read</small>
+                        <small className="posted-at">Posted • {formatDate(article.created_at)}</small>
 					</div>
 				</div>
 				<div className="article-banner">
