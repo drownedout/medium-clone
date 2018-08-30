@@ -20,6 +20,8 @@ const UserSchema = new Schema({
 			ref: 'User'
 		}
 	]
+},{
+	timestamps: { createdAt: 'created_at', updatedAt: 'updated_at' }
 });
 
 UserSchema.methods.follow = function(user_id){

@@ -20,6 +20,8 @@ const ArticleSchema = new Schema({
 			text: String
 		}
 	]
+},{
+	timestamps: { createdAt: 'created_at', updatedAt: 'updated_at' }
 });
 
 ArticleSchema.methods.clap = function(){
