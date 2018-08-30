@@ -1,11 +1,12 @@
 .article-view-section {
-	width: 60%;
+	width: 55%;
 	margin: 2rem auto;
 	padding: 2rem 1.5rem;
 	max-width: 1200px;
-	@include box-shadow(.55);
 	.article-view-header {
 		@include flex($between);
+		border-bottom: 1px solid $grey;
+		padding: 1rem 0;
 		.article-view-author {
 			.avatar-container,
 			.meta-container {
@@ -47,8 +48,23 @@
 			font-size: 2.5rem;
 			margin: 1rem 0 .5rem 0;
 		}
-		font-weight: 300;
-		line-height: 1.75rem;
+		.article-body {
+			.article-text{
+				font-weight: 300;
+				line-height: 1.75rem;
+			}
+		}
+		.read-more {
+			font-size: .8rem;
+			a {
+				color: $text;
+				text-decoration: none;
+				&:hover {
+					cursor: pointer;
+					color: darken($green, 10%);
+				}
+			}
+		}
 	}
 	.article-footer {
 		margin-top: 1rem;

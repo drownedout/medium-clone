@@ -45,6 +45,7 @@ class Feed extends Component {
 			<div>
 				<div className="feed-section">
 					<div className="main-feed-section">
+						<h3 className="feed-title">Latest</h3>
 						<div className="post-wrapper">
 							{articles}
 						</div>

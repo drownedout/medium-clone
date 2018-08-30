@@ -2,11 +2,15 @@
 	@include flex-container($between);
 	.main-feed-section {
 		@include flex-child(60%);
+		.feed-title {
+			color: $green;
+			text-transform: uppercase;
+		}
 		.post-wrapper {
 			.post-panel {
-				@include box-shadow(.55);
 				margin: 3rem 0;
 				padding: 1rem 0;
+				border-bottom: 1px solid $grey;
 				&:first-child {
 					margin-top: 0;
 				}

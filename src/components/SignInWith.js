@@ -23,7 +23,7 @@ class SignInWith extends Component {
 				<div className={this.props.modalMode === true ? 'overlay open' : 'overlay'}>
 					<div className="close-btn-container">
 						<button onClick={this.props.toggleClose} data-behavior="close-overlay" type="button" className="overlay-close">
-							<i class="icon fas fa-times"></i>
+							<i className="icon fas fa-times"></i>
 						</button>
 					</div>
 					<div className="login-btn-container">
