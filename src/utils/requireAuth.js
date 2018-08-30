@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-export default function(Component){
+export default function(ChildComponent){
 	class Authenticate extends Component {
 		componentWillMount(){
 			if(!this.props.isAuth){
@@ -11,7 +11,7 @@ export default function(Component){
 		}
 		render(){
 			return(
-				<Component {...this.props} />
+				<ChildComponent {...this.props} />
 			)
 		}
 	}
@@ -23,5 +23,5 @@ export default function(Component){
 			isAuth: state.authUser.isAuth
 		}
 	}
-	return connect(mapStateToProps)(Authenticate)
+	return connect(mapStateToProps)(Authenticate);
 }
