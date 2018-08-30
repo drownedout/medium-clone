@@ -1,0 +1,64 @@
+.editor-section {
+	width: 60%;
+	margin: 2rem auto;
+	padding: 4rem 1.5rem;
+	max-width: 1200px;
+	@include box-shadow(.55);
+	.post-metadata {
+		@include flex($between);
+		margin-bottom: 2rem;
+		align-items: center;
+		.avatar-image {
+			border-radius: 100%;
+			height: 100px;
+			width: 100px;
+		}
+		.post-info {
+			@include flex-child(85%);
+			.author-name {
+				font-size: 2rem;
+				a {
+					text-decoration: none;
+					color: $title
+				}
+			}
+		}
+	}
+	.editor-form {
+		max-width: 100%;
+		width: 100%;
+		.file-upload-previewer {
+			max-width: 100%;
+			width: 100%;
+			overflow: hidden;
+			img {
+				max-width: 100%;
+				width: 100%;
+			}
+		}
+		.input-field {
+			margin: 1rem 0;
+			.editor-title{
+				font-size:36px;
+				border:none;
+				outline:none;
+				width: 100%;
+			}
+			.medium-editable{
+				min-height:300px;
+				outline:none;
+				font-size:20px;
+				line-height:1.7;
+				font-weight:300;
+				border:none;
+				color:rgba(0,0,0,.8);
+				line-height:1.5;
+				position:relative;
+				left:-60
+			}
+		}
+		.hidden {
+			display: none;
+		}
+	}
+}

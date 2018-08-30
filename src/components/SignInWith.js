@@ -15,20 +15,29 @@ class SignInWith extends Component {
 				token: res.Zi.access_token,
 				provider_pic: res.w3.Paa
 			}
-			console.log(postData)
-			this.props.signInUser(postData)
-	        this.props.toggleClose()
+			this.props.signInUser(postData);
+	        this.props.toggleClose();
 		}
 		return (
 			<div>
-				<GoogleLogin 
-					className="btn"
-					clientId={`${GOOGLECLIENT}.apps.googleusercontent.com`}
-					onSuccess={responseGoogle}
-					onFailure={responseGoogle}
-				>
-					<i className="fa fa-google"></i><span> SignIn with Google</span>
-				</GoogleLogin>
+				<div className={this.props.modalMode === true ? 'overlay open' : 'overlay'}>
+					<div className="close-btn-container">
+						<button onClick={this.props.toggleClose} data-behavior="close-overlay" type="button" className="overlay-close">
+							<i class="icon fas fa-times"></i>
+						</button>
+					</div>
+					<div className="login-btn-container">
+						<h2>Login</h2>
+						<GoogleLogin 
+							className="btn google"
+							clientId={`${GOOGLECLIENT}.apps.googleusercontent.com`}
+							onSuccess={responseGoogle}
+							onFailure={responseGoogle}
+						>
+							<i className="fab fa-google"></i><span> SignIn with Google</span>
+						</GoogleLogin>
+					</div>
+				</div>
 			</div>
 		)
 	}
@@ -42,3 +51,4 @@ const mapStateToProps = state => {
 
 export default connect(mapStateToProps, 
 	   { toggleClose, toggleOpen, signInUser })(SignInWith);
+	   

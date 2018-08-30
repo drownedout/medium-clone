@@ -81,9 +81,6 @@
 				-o-transition: color .2s ease-in-out;
 				-ms-transition: color .2s ease-in-out;
 				transition: color .2s ease-in-out;
-			    &:hover {
-			    	color: $blue;
-			    }
 			    @media only screen and (max-width: 800px){
 			    	padding: 18px 0;
 			    	line-height: 18px;
@@ -92,13 +89,10 @@
 			    }
 		    }
 		    .btn {
-		    	color: $white;
+		    	color: $green;
 		    	@include transition(.3s);
 		    	padding: .75rem 2.25rem;
 		    	margin: 0;
-		    	&:hover {
-		    		color: $white;
-		    	}
 		    	.hidden {
 		    		@media only screen and (max-width: 975px){
 		    			display: none;

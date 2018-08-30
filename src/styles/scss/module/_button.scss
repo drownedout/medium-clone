@@ -32,12 +32,12 @@
 			border: 1px solid lighten($green, 10%);
 		}
 	}
-	&.red {
+	&.google {
 		color: $white;
-		@include gradient();
-		border: 1px solid $red;
+		background-color: $red;
+		border: 1px solid darken($red, 5%);
 		&:hover {
-			background-color: lighten($red, 10%);
+			background-color: lighten($red, 5%);
 		}
 	}
 	&.white {
