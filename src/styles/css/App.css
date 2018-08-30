@@ -3774,6 +3774,95 @@ readers do not read off random characters that represent icons */
               cursor: pointer;
               color: #004DE4; }
 
+.feed-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex: 1;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: space-between;
+  -ms-flex-pack: space-between;
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto; }
+  .feed-section .main-feed-section {
+    -ms-flex-preferred-size: calc(60% - calc(60%/20));
+    flex-basis: calc(60% - calc(60%/20));
+    max-width: calc(60% - calc(60%/20)); }
+    .feed-section .main-feed-section .post-wrapper .post-panel {
+      -webkit-box-shadow: 6px 14px 100px -29px rgba(0, 0, 0, 0.55);
+      -moz-box-shadow: 6px 14px 100px -29px rgba(0, 0, 0, 0.55);
+      box-shadow: 6px 14px 100px -29px rgba(0, 0, 0, 0.55);
+      margin: 3rem 0;
+      padding: 1rem 0; }
+      .feed-section .main-feed-section .post-wrapper .post-panel:first-child {
+        margin-top: 0; }
+      .feed-section .main-feed-section .post-wrapper .post-panel .post-metadata {
+        padding: 1rem 1rem .5rem; }
+        .feed-section .main-feed-section .post-wrapper .post-panel .post-metadata .avatar-container,
+        .feed-section .main-feed-section .post-wrapper .post-panel .post-metadata .post-info {
+          display: inline-block;
+          vertical-align: middle; }
+        .feed-section .main-feed-section .post-wrapper .post-panel .post-metadata .avatar-container {
+          margin-right: 15px; }
+          .feed-section .main-feed-section .post-wrapper .post-panel .post-metadata .avatar-container .avatar-image {
+            width: 50px;
+            height: 50px;
+            border-radius: 100%;
+            -webkit-box-shadow: 6px 14px 100px -29px rgba(0, 0, 0, 0.55);
+            -moz-box-shadow: 6px 14px 100px -29px rgba(0, 0, 0, 0.55);
+            box-shadow: 6px 14px 100px -29px rgba(0, 0, 0, 0.55); }
+        .feed-section .main-feed-section .post-wrapper .post-panel .post-metadata .post-info .author-name {
+          color: #23D4BD;
+          text-decoration: none;
+          display: block; }
+          .feed-section .main-feed-section .post-wrapper .post-panel .post-metadata .post-info .author-name:hover {
+            color: #1ca896;
+            cursor: pointer; }
+        .feed-section .main-feed-section .post-wrapper .post-panel .post-metadata .post-info .posted-at {
+          color: #828c99; }
+      .feed-section .main-feed-section .post-wrapper .post-panel .post-content {
+        padding: 0 1rem; }
+        .feed-section .main-feed-section .post-wrapper .post-panel .post-content .post-title {
+          font-size: 2rem;
+          margin: .5rem 0 0 0; }
+          .feed-section .main-feed-section .post-wrapper .post-panel .post-content .post-title a {
+            color: #16171a;
+            text-decoration: none;
+            -webkit-transition: all 0.3s ease-in-out;
+            -moz-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            -ms-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out; }
+            .feed-section .main-feed-section .post-wrapper .post-panel .post-content .post-title a:hover {
+              color: #1ca896;
+              cursor: pointer; }
+        .feed-section .main-feed-section .post-wrapper .post-panel .post-content .read-more {
+          text-decoration: none;
+          display: inline-block;
+          color: #687280;
+          font-size: .75rem; }
+          .feed-section .main-feed-section .post-wrapper .post-panel .post-content .read-more:hover {
+            color: #1ca896;
+            cursor: pointer; }
+      .feed-section .main-feed-section .post-wrapper .post-panel .post-footer {
+        margin-top: 1rem;
+        padding: 0 1rem; }
+        .feed-section .main-feed-section .post-wrapper .post-panel .post-footer .button_to,
+        .feed-section .main-feed-section .post-wrapper .post-panel .post-footer .like_count {
+          display: inline-block; }
+        .feed-section .main-feed-section .post-wrapper .post-panel .post-footer .button_to {
+          margin-right: 10px; }
+          .feed-section .main-feed-section .post-wrapper .post-panel .post-footer .button_to .like-button {
+            border: none;
+            padding: 0; }
+            .feed-section .main-feed-section .post-wrapper .post-panel .post-footer .button_to .like-button .icon {
+              color: #da0606; }
+            .feed-section .main-feed-section .post-wrapper .post-panel .post-footer .button_to .like-button .hidden {
+              display: none; }
+
 .editor-section {
   width: 60%;
   margin: 2rem auto;

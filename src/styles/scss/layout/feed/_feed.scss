@@ -1,0 +1,94 @@
+.feed-section {
+	@include flex-container($between);
+	.main-feed-section {
+		@include flex-child(60%);
+		.post-wrapper {
+			.post-panel {
+				@include box-shadow(.55);
+				margin: 3rem 0;
+				padding: 1rem 0;
+				&:first-child {
+					margin-top: 0;
+				}
+				.post-metadata {
+					padding: 1rem 1rem .5rem;
+					.avatar-container,
+					.post-info {
+						display: inline-block;
+						vertical-align: middle;
+					}
+					.avatar-container {
+						margin-right: 15px;
+						.avatar-image {
+							width: 50px;
+							height: 50px;
+							border-radius: 100%;
+							@include box-shadow(.55);
+						}
+					}
+					.post-info {
+						.author-name {
+							color: $green;
+							text-decoration: none;
+							display: block;
+							&:hover {
+								color: darken($green, 10%);
+								cursor: pointer;
+							}
+						}
+						.posted-at {
+							color: $text;
+						}
+					}
+				}
+				.post-content {
+					padding: 0 1rem;
+					.post-title {
+						font-size: 2rem;
+						margin: .5rem 0 0 0;
+						a {
+							color: $title;
+							text-decoration: none;
+							@include transition(.3s);
+							&:hover {
+								color: darken($green, 10%);
+								cursor: pointer;
+							}
+						}
+					}
+					.read-more {
+						text-decoration: none;
+						display: inline-block;
+						color: darken($text, 10%);
+						font-size: .75rem;
+						&:hover {
+							color: darken($green, 10%);
+							cursor: pointer;
+						}
+					}
+				}
+				.post-footer {
+					margin-top: 1rem;
+					padding: 0 1rem;
+					.button_to,
+					.like_count {
+						display: inline-block;
+					}
+					.button_to {
+						margin-right: 10px;
+						.like-button {
+							border: none;
+							padding: 0;
+							.icon {
+								color: $red;
+							}
+							.hidden {
+								display: none;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

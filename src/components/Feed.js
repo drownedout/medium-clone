@@ -10,13 +10,48 @@ class Feed extends Component {
 	}
 
 	render(){
-		const articles = this.props.articles.reverse().map((article) => {
-
-		});
+		const articles = this.props.articles.reverse().map((article) => 
+			<div className="post-panel">
+				<div className="post-metadata">
+					<div className="avatar-container">
+						<img alt="avatar" className="avatar-image" src={article.author.provider_pic} />
+					</div>
+					<div className="post-info">
+                        <a className="author-name" href={`/profile/${article.author._id}`}>{article.author.name}</a>
+                        <small className="posted-at">Posted • A must read</small>
+					</div>
+				</div>
+				<div className="post-content">
+					<h3 className="post-title"><a href={`/article/${article._id}`}>{article.title}</a></h3>
+					<div className="post-body">
+                        <p className="" dangerouslySetInnerHTML={{__html: article.description}}></p>
+                    </div>
+                    <a className="read-more" href={`/article/${article._id}`}>Read more</a>
+				</div>
+				<div className="post-footer">
+					<div className="like-button-wrapper">
+                        <form className="button_to" method="get" action="">
+                            <button className="like-button" type="submit">
+                            	<i className="icon fas fa-heart"></i><span className="hidden">Like</span>
+                            </button>
+                        </form>
+                        <span className="like-count">{article.claps}</span>
+                    </div>
+				</div>
+			</div>
+		);
 
 		return (
 			<div>
-				<h1>Feed</h1>
+				<div className="feed-section">
+					<div className="main-feed-section">
+						<div className="post-wrapper">
+							{articles}
+						</div>
+					</div>
+					<div className="aside-section">
+					</div>
+				</div>
 			</div>
 		)
 	}
