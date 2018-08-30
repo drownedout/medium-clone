@@ -17,6 +17,7 @@
 .env.production.local
 .sass-cache
 src/utils/keys.js
+server/utils/keys.js
 
 npm-debug.log*
 yarn-debug.log*

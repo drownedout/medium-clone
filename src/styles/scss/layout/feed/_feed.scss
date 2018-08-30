@@ -6,18 +6,18 @@
 			color: $green;
 			text-transform: uppercase;
 		}
-		.post-wrapper {
-			.post-panel {
+		.article-wrapper {
+			.article-panel {
 				margin: 3rem 0;
 				padding: 1rem 0;
 				border-bottom: 1px solid $grey;
 				&:first-child {
 					margin-top: 0;
 				}
-				.post-metadata {
-					padding: 1rem 1rem .5rem;
+				.article-metadata {
+					padding: 1rem 0 .5rem;
 					.avatar-container,
-					.post-info {
+					.article-info {
 						display: inline-block;
 						vertical-align: middle;
 					}
@@ -30,7 +30,7 @@
 							@include box-shadow(.55);
 						}
 					}
-					.post-info {
+					.article-info {
 						.author-name {
 							color: $green;
 							text-decoration: none;
@@ -45,9 +45,18 @@
 						}
 					}
 				}
-				.post-content {
-					padding: 0 1rem;
-					.post-title {
+				.article-banner {
+					.article-image-container {
+						max-width: 100%;
+						overflow: hidden;
+						.article-image {
+							max-width: 100%;
+							width: 100%;
+						}
+					}
+				}
+				.article-content {
+					.article-title {
 						font-size: 2rem;
 						margin: .5rem 0 0 0;
 						a {
@@ -71,9 +80,8 @@
 						}
 					}
 				}
-				.post-footer {
+				.article-footer {
 					margin-top: 1rem;
-					padding: 0 1rem;
 					.button_to,
 					.like_count {
 						display: inline-block;

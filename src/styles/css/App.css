@@ -3794,74 +3794,77 @@ readers do not read off random characters that represent icons */
     .feed-section .main-feed-section .feed-title {
       color: #23D4BD;
       text-transform: uppercase; }
-    .feed-section .main-feed-section .post-wrapper .post-panel {
+    .feed-section .main-feed-section .article-wrapper .article-panel {
       margin: 3rem 0;
       padding: 1rem 0;
       border-bottom: 1px solid #d9d9d9; }
-      .feed-section .main-feed-section .post-wrapper .post-panel:first-child {
+      .feed-section .main-feed-section .article-wrapper .article-panel:first-child {
         margin-top: 0; }
-      .feed-section .main-feed-section .post-wrapper .post-panel .post-metadata {
-        padding: 1rem 1rem .5rem; }
-        .feed-section .main-feed-section .post-wrapper .post-panel .post-metadata .avatar-container,
-        .feed-section .main-feed-section .post-wrapper .post-panel .post-metadata .post-info {
+      .feed-section .main-feed-section .article-wrapper .article-panel .article-metadata {
+        padding: 1rem 0 .5rem; }
+        .feed-section .main-feed-section .article-wrapper .article-panel .article-metadata .avatar-container,
+        .feed-section .main-feed-section .article-wrapper .article-panel .article-metadata .article-info {
           display: inline-block;
           vertical-align: middle; }
-        .feed-section .main-feed-section .post-wrapper .post-panel .post-metadata .avatar-container {
+        .feed-section .main-feed-section .article-wrapper .article-panel .article-metadata .avatar-container {
           margin-right: 15px; }
-          .feed-section .main-feed-section .post-wrapper .post-panel .post-metadata .avatar-container .avatar-image {
+          .feed-section .main-feed-section .article-wrapper .article-panel .article-metadata .avatar-container .avatar-image {
             width: 50px;
             height: 50px;
             border-radius: 100%;
             -webkit-box-shadow: 6px 14px 100px -29px rgba(0, 0, 0, 0.55);
             -moz-box-shadow: 6px 14px 100px -29px rgba(0, 0, 0, 0.55);
             box-shadow: 6px 14px 100px -29px rgba(0, 0, 0, 0.55); }
-        .feed-section .main-feed-section .post-wrapper .post-panel .post-metadata .post-info .author-name {
+        .feed-section .main-feed-section .article-wrapper .article-panel .article-metadata .article-info .author-name {
           color: #23D4BD;
           text-decoration: none;
           display: block; }
-          .feed-section .main-feed-section .post-wrapper .post-panel .post-metadata .post-info .author-name:hover {
+          .feed-section .main-feed-section .article-wrapper .article-panel .article-metadata .article-info .author-name:hover {
             color: #1ca896;
             cursor: pointer; }
-        .feed-section .main-feed-section .post-wrapper .post-panel .post-metadata .post-info .posted-at {
+        .feed-section .main-feed-section .article-wrapper .article-panel .article-metadata .article-info .posted-at {
           color: #828c99; }
-      .feed-section .main-feed-section .post-wrapper .post-panel .post-content {
-        padding: 0 1rem; }
-        .feed-section .main-feed-section .post-wrapper .post-panel .post-content .post-title {
-          font-size: 2rem;
-          margin: .5rem 0 0 0; }
-          .feed-section .main-feed-section .post-wrapper .post-panel .post-content .post-title a {
-            color: #16171a;
-            text-decoration: none;
-            -webkit-transition: all 0.3s ease-in-out;
-            -moz-transition: all 0.3s ease-in-out;
-            -o-transition: all 0.3s ease-in-out;
-            -ms-transition: all 0.3s ease-in-out;
-            transition: all 0.3s ease-in-out; }
-            .feed-section .main-feed-section .post-wrapper .post-panel .post-content .post-title a:hover {
-              color: #1ca896;
-              cursor: pointer; }
-        .feed-section .main-feed-section .post-wrapper .post-panel .post-content .read-more {
+      .feed-section .main-feed-section .article-wrapper .article-panel .article-banner .article-image-container {
+        max-width: 100%;
+        overflow: hidden; }
+        .feed-section .main-feed-section .article-wrapper .article-panel .article-banner .article-image-container .article-image {
+          max-width: 100%;
+          width: 100%; }
+      .feed-section .main-feed-section .article-wrapper .article-panel .article-content .article-title {
+        font-size: 2rem;
+        margin: .5rem 0 0 0; }
+        .feed-section .main-feed-section .article-wrapper .article-panel .article-content .article-title a {
+          color: #16171a;
           text-decoration: none;
-          display: inline-block;
-          color: #687280;
-          font-size: .75rem; }
-          .feed-section .main-feed-section .post-wrapper .post-panel .post-content .read-more:hover {
+          -webkit-transition: all 0.3s ease-in-out;
+          -moz-transition: all 0.3s ease-in-out;
+          -o-transition: all 0.3s ease-in-out;
+          -ms-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out; }
+          .feed-section .main-feed-section .article-wrapper .article-panel .article-content .article-title a:hover {
             color: #1ca896;
             cursor: pointer; }
-      .feed-section .main-feed-section .post-wrapper .post-panel .post-footer {
-        margin-top: 1rem;
-        padding: 0 1rem; }
-        .feed-section .main-feed-section .post-wrapper .post-panel .post-footer .button_to,
-        .feed-section .main-feed-section .post-wrapper .post-panel .post-footer .like_count {
+      .feed-section .main-feed-section .article-wrapper .article-panel .article-content .read-more {
+        text-decoration: none;
+        display: inline-block;
+        color: #687280;
+        font-size: .75rem; }
+        .feed-section .main-feed-section .article-wrapper .article-panel .article-content .read-more:hover {
+          color: #1ca896;
+          cursor: pointer; }
+      .feed-section .main-feed-section .article-wrapper .article-panel .article-footer {
+        margin-top: 1rem; }
+        .feed-section .main-feed-section .article-wrapper .article-panel .article-footer .button_to,
+        .feed-section .main-feed-section .article-wrapper .article-panel .article-footer .like_count {
           display: inline-block; }
-        .feed-section .main-feed-section .post-wrapper .post-panel .post-footer .button_to {
+        .feed-section .main-feed-section .article-wrapper .article-panel .article-footer .button_to {
           margin-right: 10px; }
-          .feed-section .main-feed-section .post-wrapper .post-panel .post-footer .button_to .like-button {
+          .feed-section .main-feed-section .article-wrapper .article-panel .article-footer .button_to .like-button {
             border: none;
             padding: 0; }
-            .feed-section .main-feed-section .post-wrapper .post-panel .post-footer .button_to .like-button .icon {
+            .feed-section .main-feed-section .article-wrapper .article-panel .article-footer .button_to .like-button .icon {
               color: #da0606; }
-            .feed-section .main-feed-section .post-wrapper .post-panel .post-footer .button_to .like-button .hidden {
+            .feed-section .main-feed-section .article-wrapper .article-panel .article-footer .button_to .like-button .hidden {
               display: none; }
 
 .article-view-section {
@@ -3907,6 +3910,12 @@ readers do not read off random characters that represent icons */
       color: #828c99;
       margin: 0;
       font-size: .8rem; }
+  .article-view-section .article-banner .article-image-container {
+    max-width: 100%;
+    overflow: hidden; }
+    .article-view-section .article-banner .article-image-container .article-image {
+      max-width: 100%;
+      width: 100%; }
   .article-view-section .article-content .title {
     font-size: 2.5rem;
     margin: 1rem 0 .5rem 0; }

@@ -47,8 +47,8 @@ class ArticleView extends Component {
 						</div>
 					</div>
 					<div className="article-banner">
-						{!feature_img || !feature_img.length > 0 ? '' : <div className="post-image-container">
-                            <img src={feature_img} alt="feature img 540" />
+						{!feature_img || !feature_img.length > 0 ? '' : <div className="article-image-container">
+                            <img src={feature_img} alt="feature img 540" className="article-image" />
                         </div> }
 					</div>
 					<div className="article-content">
