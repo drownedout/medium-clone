@@ -22,9 +22,52 @@ class ArticleView extends Component {
 		const { text, claps, title, feature_img, author } = this.props._article;
 		let author_name, author_img, author_id;
 
+		if (author){
+			const { name, provider_pic, _id } = author;
+			author_name = name;
+			author_id = _id;
+			author_img = provider_pic;
+		}
+
 		return (
 			<div>
-				<h1>Article Show</h1>
+				<div className="article-view-section">
+					<div className="article-view-header">
+						<div className="article-view-author">
+							<div className="avatar-container">
+								<img alt={author_name} className="avatar-image" src={author_img} height="40" width="40" />
+							</div>
+							<div className="meta-container">
+								<h4 className="author-name"><a href={`/profile/${author_id}`}>{author_name}</a></h4>
+								<p className="created-date">Created</p>
+							</div>
+						</div>
+						<div className="follow-btn-container">
+						</div>
+					</div>
+					<div className="article-banner">
+						{!feature_img || !feature_img.length > 0 ? '' : <div className="post-image-container">
+                            <img src={feature_img} alt="feature img 540" />
+                        </div> }
+					</div>
+					<div className="article-content">
+						<h3 className="title">{title}</h3>
+						<div className="article-body">
+							<p></p>
+                            <p className="article-text" dangerouslySetInnerHTML={{__html: text}}>
+                            </p>
+                            <p></p>
+						</div>
+					</div>
+					<div className="article-footer">
+                        <div className="like-btn-container">
+	                        <button onClick={() => this.props.clap(this.props._article._id)} className="like-button" data-behavior="trigger-overlay" type="submit">
+		                        <i className="icon fas fa-heart"></i><span className="hidden">Like</span>
+	                        </button>
+	                        <span className="like-count">{claps}</span>
+                        </div>
+					</div>
+				</div>
 			</div>
 		)
 	}
