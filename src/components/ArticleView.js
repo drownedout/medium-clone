@@ -43,6 +43,7 @@ class ArticleView extends Component {
 							</div>
 						</div>
 						<div className="follow-btn-container">
+							{this.props.user && this.props.user._id !== author_id ? <FollowButton user={`${this.props.user.following}`} to_follow={`${author_id}`} /> : ''}
 						</div>
 					</div>
 					<div className="article-banner">

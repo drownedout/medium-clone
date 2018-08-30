@@ -17,10 +17,10 @@
 	@include box-shadow(.45);
 	&.primary {
 		color: $white;
-		background-color: $blue;
-		border: 1px solid darken($blue, 5%);
+		background-color: $green;
+		border: 1px solid darken($green, 5%);
 		&:hover {
-			background-color: lighten($blue, 5%);
+			background-color: lighten($green, 10%);
 		}
 	}
 	&.secondary {

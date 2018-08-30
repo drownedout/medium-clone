@@ -2929,10 +2929,10 @@ readers do not read off random characters that represent icons */
       margin: 1rem auto; } }
   .btn.primary {
     color: #fff;
-    background-color: #004DE4;
-    border: 1px solid #0044cb; }
+    background-color: #23D4BD;
+    border: 1px solid #1fbea9; }
     .btn.primary:hover {
-      background-color: #0056fe; }
+      background-color: #49e1cd; }
   .btn.secondary {
     color: #23D4BD;
     background-color: transparent;
